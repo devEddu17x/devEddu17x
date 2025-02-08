@@ -6,18 +6,16 @@ I'm an enthusiastic Systems Engineering student with a passion for backend devel
 
 ## 🌱 I’m currently learning
 
-- NestJS
-- TypeORM
+- Redis
+- Paypal integration
 
 ## 💼 I'm currently working on
 
-- Developing an API for an Inventory Management System with User Management
-- Improving my skills in backend development
+- Movie Reservation System
 
 ## 💬 Ask me about
 
-- API development with Express or NestJS
-- Database management with SQL
+- API development with NestJS
 
 
 ## ⚡ Fun fact
