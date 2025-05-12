@@ -6,12 +6,12 @@ I'm an enthusiastic Systems Engineering student with a passion for backend devel
 
 ## 🌱 I’m currently learning
 
-- Redis
-- Paypal integration
+- MySQL innodb engine variables configuration
+- RAID implementation
 
 ## 💼 I'm currently working on
 
-- Movie Reservation System
+- Looking for new projetcs
 
 ## 💬 Ask me about
 
