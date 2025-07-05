@@ -6,8 +6,7 @@ I'm an enthusiastic Systems Engineering student with a passion for backend devel
 
 ## 🌱 I’m currently learning
 
-- MySQL innodb engine variables configuration
-- RAID implementation
+- MCP
 
 ## 💼 I'm currently working on
 
