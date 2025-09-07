@@ -6,7 +6,7 @@ I'm an enthusiastic Systems Engineering student with a passion for backend devel
 
 ## 🌱 I’m currently learning
 
-- MCP
+- CNN
 
 ## 💼 I'm currently working on
 
