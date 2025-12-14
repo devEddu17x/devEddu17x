@@ -101,15 +101,21 @@ API for a campus course-planning solution with Redis caching, email workflows, a
 
 ## GitHub stats
 
-<p align="center">
-	<img height="170" src="https://github-readme-stats.vercel.app/api?username=devEddu17x&theme=tokyonight&hide_border=true" alt="GitHub stats" />
-	<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=devEddu17x&theme=tokyonight&hide_border=true&layout=compact&hide=Jupyter%20Notebook" alt="Top languages" />
+<table width="100%">
+	<tr>
+		<td width="50%">
+			<img width="100%" src="https://github-readme-stats.vercel.app/api?username=devEddu17x&theme=tokyonight&hide_border=true" alt="GitHub stats" />
+		</td>
+		<td width="50%">
+			<img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=devEddu17x&theme=tokyonight&hide_border=true&layout=compact&hide=Jupyter%20Notebook" alt="Top languages" />
+		</td>
+	</tr>
+</table>
+
+<p>
+	<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=devEddu17x&theme=tokyo-night&hide_border=true" alt="Contribution graph" />
 </p>
 
-<p align="center">
-	<img src="https://github-readme-activity-graph.vercel.app/graph?username=devEddu17x&theme=tokyo-night&hide_border=true" alt="Contribution graph" />
-</p>
-
-<p align="center">
-	<img src="https://streak-stats.demolab.com/?user=devEddu17x&theme=tokyonight&hide_border=true" alt="GitHub streak" />
+<p>
+	<img width="100%" src="https://streak-stats.demolab.com/?user=devEddu17x&theme=tokyonight&hide_border=true" alt="GitHub streak" />
 </p>
