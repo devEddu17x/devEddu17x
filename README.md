@@ -71,7 +71,8 @@ NOTE (local asset):
 
 ## Currently learning
 
-- AWS architecture deep dives (EC2, RDS)
+- AWS architecture
+- IaC
 - Next: Big Data (Spark ecosystem)
 
 ## GitHub stats
