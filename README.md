@@ -41,33 +41,33 @@ NOTE (local asset):
 
 ### Languages
 
-![TypeScript](https://img.shields.io/badge/TypeScript-0B1B2B?style=for-the-badge&logo=typescript&logoColor=4FC3F7)
-![Python](https://img.shields.io/badge/Python-0B1B2B?style=for-the-badge&logo=python&logoColor=4FC3F7)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 ### Backend
 
-![NestJS](https://img.shields.io/badge/NestJS-0B1B2B?style=for-the-badge&logo=nestjs&logoColor=4FC3F7)
-![Kafka](https://img.shields.io/badge/Apache%20Kafka-0B1B2B?style=for-the-badge&logo=apachekafka&logoColor=4FC3F7)
-![Socket.io](https://img.shields.io/badge/Socket.IO-0B1B2B?style=for-the-badge&logo=socketdotio&logoColor=4FC3F7)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
+![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
 
 ### Data
 
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0B1B2B?style=for-the-badge&logo=postgresql&logoColor=4FC3F7)
-![MySQL](https://img.shields.io/badge/MySQL-0B1B2B?style=for-the-badge&logo=mysql&logoColor=4FC3F7)
-![Oracle](https://img.shields.io/badge/Oracle-0B1B2B?style=for-the-badge&logo=oracle&logoColor=4FC3F7)
-![Apache Spark](https://img.shields.io/badge/Apache%20Spark-0B1B2B?style=for-the-badge&logo=apachespark&logoColor=4FC3F7)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
 
 ### ORM / DB tooling
 
-![TypeORM](https://img.shields.io/badge/TypeORM-0B1B2B?style=for-the-badge&logo=typeorm&logoColor=4FC3F7)
-![Drizzle](https://img.shields.io/badge/Drizzle-0B1B2B?style=for-the-badge&logo=drizzle&logoColor=4FC3F7)
+![TypeORM](https://img.shields.io/badge/TypeORM-FE0803?style=for-the-badge&logo=typeorm&logoColor=white)
+![Drizzle](https://img.shields.io/badge/Drizzle-C5F74F?style=for-the-badge&logo=drizzle&logoColor=000000)
 
 ### Cloud & DevOps
 
-![Docker](https://img.shields.io/badge/Docker-0B1B2B?style=for-the-badge&logo=docker&logoColor=4FC3F7)
-![Linux](https://img.shields.io/badge/Linux-0B1B2B?style=for-the-badge&logo=linux&logoColor=4FC3F7)
-![AWS](https://img.shields.io/badge/AWS-0B1B2B?style=for-the-badge&logo=amazonaws&logoColor=4FC3F7)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-0B1B2B?style=for-the-badge&logo=cloudflare&logoColor=4FC3F7)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=000000)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
 
 ## Currently learning
 
