@@ -101,16 +101,10 @@ API for a campus course-planning solution with Redis caching, email workflows, a
 
 ## GitHub stats
 
-<table width="100%">
-	<tr>
-		<td width="50%">
-			<img width="100%" src="https://github-readme-stats.vercel.app/api?username=devEddu17x&theme=tokyonight&hide_border=true" alt="GitHub stats" />
-		</td>
-		<td width="50%">
-			<img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=devEddu17x&theme=tokyonight&hide_border=true&layout=compact&hide=Jupyter%20Notebook" alt="Top languages" />
-		</td>
-	</tr>
-</table>
+<div style="display: flex; gap: 12px; width: 100%; margin-bottom: 14px;">
+	<img style="width: calc(50% - 6px); height: auto; display: block;" src="https://github-readme-stats.vercel.app/api?username=devEddu17x&theme=tokyonight&hide_border=true" alt="GitHub stats" />
+	<img style="width: calc(50% - 6px); height: auto; display: block;" src="https://github-readme-stats.vercel.app/api/top-langs/?username=devEddu17x&theme=tokyonight&hide_border=true&layout=compact&hide=Jupyter%20Notebook" alt="Top languages" />
+</div>
 
 <p>
 	<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=devEddu17x&theme=tokyo-night&hide_border=true" alt="Contribution graph" />
