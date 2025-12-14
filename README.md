@@ -30,37 +30,12 @@ NOTE (local asset):
 
 ## Featured projects
 
-### `tree-rings-kafka-api`
-
-Reliable image-processing workflow using bucket-first ingestion + Kafka for guaranteed processing and Socket.IO for real-time delivery.
-
-- Stack: NestJS, Kafka, Socket.IO
-- Status: shipped
-- Repo: https://github.com/devEddu17x/tree-rings-kafka-api
-
-### `dumi-textile-api`
-
-Internal production API for a real textile company: complex quoting → order flows adapted to business rules.
-
-- Stack: PostgreSQL, Supertokens (auth), Cloudflare R2, Grafana
-- Status: in production (internal)
-- Repo: https://github.com/devEddu17x/dumi-textile-api
-
-### `apache-spark-perception-tree-rings`
-
-Distributed processing lab: Spark + Kafka + ZooKeeper in containers, with computer-vision inference running inside Spark workers.
-
-- Stack: Apache Spark, Kafka, ZooKeeper, CNN (inference)
-- Status: R&D / exploration
-- Repo: https://github.com/devEddu17x/apache-spark-perception-tree-rings
-
-### `huecorario-api`
-
-API for a campus course-planning solution with Redis caching, email workflows, and bucket-based media uploads using signed URLs.
-
-- Stack: MongoDB, Redis, Cloudflare R2 (S3-compatible), email, JWT
-- Status: shipped
-- Repo: https://github.com/devEddu17x/huecorario-api
+| Project                                                                                                  | What it is                                                                   | Stack                                              | Status                   |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------ |
+| [`tree-rings-kafka-api`](https://github.com/devEddu17x/tree-rings-kafka-api)                             | Bucket-first ingestion → Kafka processing → real-time delivery via Socket.IO | NestJS · Kafka · Socket.IO                         | shipped                  |
+| [`dumi-textile-api`](https://github.com/devEddu17x/dumi-textile-api)                                     | Internal production API for a textile company (quoting → order flows)        | PostgreSQL · Supertokens · Cloudflare R2 · Grafana | in production (internal) |
+| [`apache-spark-perception-tree-rings`](https://github.com/devEddu17x/apache-spark-perception-tree-rings) | Spark + Kafka + ZooKeeper lab with CV inference inside Spark workers         | Spark · Kafka · ZooKeeper · CNN (inference)        | exploration              |
+| [`huecorario-api`](https://github.com/devEddu17x/huecorario-api)                                         | Course-planning API with caching + email workflows + signed URL uploads      | MongoDB · Redis · Cloudflare R2 · Email · JWT      | shipped                  |
 
 ## Core stack
 
