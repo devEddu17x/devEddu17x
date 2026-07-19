@@ -40,7 +40,7 @@ const commonProjects = {
   telar: {
     name: "Telar",
     status: "Live · Client project",
-    duration: "1 year",
+    duration: "1 year ago",
     demo: "https://telar-app.eddux.dev/",
     repos: [
       { label: "Frontend", href: "https://github.com/devEddu17x/telar-front" },
@@ -53,7 +53,7 @@ const commonProjects = {
   meetone: {
     name: "MeetOne",
     status: "Live · Startup",
-    duration: "3 months",
+    duration: "3 months ago",
     demo: "https://meetone.eddux.dev/",
     repos: [
       { label: "Frontend", href: "https://github.com/devEddu17x/meet-one-frontend" },
@@ -117,8 +117,8 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
       intro: "The areas where I do my best work: building reliable services, defining infrastructure as code, and making production delivery repeatable.",
       items: [
         { title: "Backend & APIs", description: "Business logic, authentication, real-time communication, and service boundaries.", technologies: ["TypeScript", "Node.js", "NestJS", "REST", "OpenAPI", "WebSockets", "WebRTC"] },
-        { title: "Cloud & IaC", description: "AWS and Cloudflare architectures designed for security, scalability, and fault tolerance, defined as code.", technologies: ["AWS", "Terraform / HCL", "ECS", "Lambda", "API Gateway", "Cloudflare"] },
-        { title: "Data & Distributed Systems", description: "Relational persistence, NoSQL, event streams, and distributed data processing.", technologies: ["PostgreSQL", "MySQL", "DynamoDB", "Kafka", "Apache Spark", "Cloudflare R2"] },
+        { title: "Cloud & IaC", description: "AWS and Cloudflare architectures designed for security, scalability, and fault tolerance, defined as code.", technologies: ["AWS", "Cloudflare", "Terraform"] },
+        { title: "Data & Distributed Systems", description: "Relational persistence, NoSQL, event streams, and distributed data processing.", technologies: ["PostgreSQL", "MySQL", "DynamoDB", "Aurora (AWS)", "S3", "Kafka", "Apache Spark", "Cloudflare R2"] },
         { title: "DevOps & Observability", description: "Containers, continuous integration automation, secure environment deployments, and monitoring.", technologies: ["Docker", "Linux", "GitHub Actions", "OIDC", "CloudWatch", "Grafana"] },
       ],
     },
@@ -181,7 +181,7 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
         {
           ...commonProjects.telar,
           status: "En producción · Proyecto para cliente",
-          duration: "1 año",
+          duration: "hace 1 año",
           imageAlt: "Interfaz del sistema Telar",
           description: "Plataforma administrativa para una empresa de confección: empleados, clientes, prendas, cotizaciones y órdenes de producción.",
           impact: ["Desarrollado principalmente de forma individual para un cliente formal", "Despliegue altamente disponible en Fargate/ECS sobre dos Availability Zones", "Pipeline de entrega seguro con GitHub OIDC, CI/CD, WAF y secretos gestionados"],
@@ -192,7 +192,7 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
         {
           ...commonProjects.meetone,
           status: "En producción · Startup",
-          duration: "3 meses",
+          duration: "hace 3 meses",
           imageAlt: "Interfaz de videollamada MeetOne",
           description: "Plataforma de intercambio de idiomas que empareja personas para practicar con audio y video directamente desde el navegador.",
           impact: ["Llamadas P2P con WebRTC, señalización WebSocket y matchmaking", "Plano de control serverless con Lambda, API Gateway, Cognito y DynamoDB", "Evita operar un TURN propio mediante relay gestionado de Cloudflare Calls"],
@@ -208,8 +208,8 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
       intro: "Las áreas donde aporto más valor: servicios confiables, infraestructura como código y una entrega a producción repetible.",
       items: [
         { title: "Backend & APIs", description: "Lógica de negocio, autenticación, comunicación en tiempo real y límites de servicio.", technologies: ["TypeScript", "Node.js", "NestJS", "REST", "OpenAPI", "WebSockets", "WebRTC"] },
-        { title: "Cloud & IaC", description: "Arquitecturas en AWS y Cloudflare diseñadas para seguridad, escalabilidad y tolerancia a fallos, definidas como código.", technologies: ["AWS", "Terraform / HCL", "ECS", "Lambda", "API Gateway", "Cloudflare"] },
-        { title: "Data & Distributed Systems", description: "Persistencia relacional, NoSQL, flujos de eventos y procesamiento distribuido de datos.", technologies: ["PostgreSQL", "MySQL", "DynamoDB", "Kafka", "Apache Spark", "Cloudflare R2"] },
+        { title: "Cloud & IaC", description: "Arquitecturas en AWS y Cloudflare diseñadas para seguridad, escalabilidad y tolerancia a fallos, definidas como código.", technologies: ["AWS", "Terraform", "Cloudflare"] },
+        { title: "Data & Distributed Systems", description: "Persistencia relacional, NoSQL, flujos de eventos y procesamiento distribuido de datos.", technologies: ["PostgreSQL", "MySQL", "DynamoDB", "Aurora (AWS)", "S3", "Kafka", "Apache Spark", "Cloudflare R2"] },
         { title: "DevOps & Observability", description: "Contenedores, automatización de integración continua, despliegues seguros por entornos y monitorización.", technologies: ["Docker", "Linux", "GitHub Actions", "OIDC", "CloudWatch", "Grafana"] },
       ],
     },
