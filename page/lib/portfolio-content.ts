@@ -116,10 +116,10 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
       title: "Core Stack & Domains",
       intro: "The areas where I do my best work: building reliable services, defining infrastructure as code, and making production delivery repeatable.",
       items: [
-        { title: "Backend systems", description: "APIs, authentication, real-time communication, service boundaries, and documentation.", technologies: ["TypeScript", "Node.js", "NestJS", "REST", "OpenAPI", "WebSockets", "WebRTC"] },
-        { title: "Cloud & IaC", description: "AWS and Cloudflare architectures designed for security, availability, scale, and cost awareness.", technologies: ["AWS", "Terraform / HCL", "ECS", "Lambda", "API Gateway", "Cloudflare", "IAM"] },
-        { title: "Data & platforms", description: "Relational and NoSQL persistence, containers, Linux systems, automation, and observability.", technologies: ["PostgreSQL", "MySQL", "DynamoDB", "Docker", "Linux", "GitHub Actions", "Grafana"] },
-        { title: "Distributed exploration", description: "Hands-on work with event processing, distributed computation, and computer vision pipelines.", technologies: ["Kafka", "Apache Spark", "PySpark", "CNN", "Cloudflare R2", "Socket.IO"] },
+        { title: "Backend & APIs", description: "Business logic, authentication, real-time communication, and service boundaries.", technologies: ["TypeScript", "Node.js", "NestJS", "REST", "OpenAPI", "WebSockets", "WebRTC"] },
+        { title: "Cloud & IaC", description: "AWS and Cloudflare architectures designed for security, scalability, and fault tolerance, defined as code.", technologies: ["AWS", "Terraform / HCL", "ECS", "Lambda", "API Gateway", "Cloudflare"] },
+        { title: "Data & Distributed Systems", description: "Relational persistence, NoSQL, event streams, and distributed data processing.", technologies: ["PostgreSQL", "MySQL", "DynamoDB", "Kafka", "Apache Spark", "Cloudflare R2"] },
+        { title: "DevOps & Observability", description: "Containers, continuous integration automation, secure environment deployments, and monitoring.", technologies: ["Docker", "Linux", "GitHub Actions", "OIDC", "CloudWatch", "Grafana"] },
       ],
     },
     about: {
@@ -207,10 +207,10 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
       title: "Stack principal y dominios",
       intro: "Las áreas donde aporto más valor: servicios confiables, infraestructura como código y una entrega a producción repetible.",
       items: [
-        { title: "Sistemas backend", description: "APIs, autenticación, comunicación en tiempo real, límites de servicio y documentación.", technologies: ["TypeScript", "Node.js", "NestJS", "REST", "OpenAPI", "WebSockets", "WebRTC"] },
-        { title: "Cloud e IaC", description: "Arquitecturas AWS y Cloudflare pensadas para seguridad, disponibilidad, escalabilidad y costos.", technologies: ["AWS", "Terraform / HCL", "ECS", "Lambda", "API Gateway", "Cloudflare", "IAM"] },
-        { title: "Datos y plataformas", description: "Persistencia SQL y NoSQL, contenedores, sistemas Linux, automatización y observabilidad.", technologies: ["PostgreSQL", "MySQL", "DynamoDB", "Docker", "Linux", "GitHub Actions", "Grafana"] },
-        { title: "Exploración distribuida", description: "Trabajo práctico con eventos, cómputo distribuido y pipelines de visión por computador.", technologies: ["Kafka", "Apache Spark", "PySpark", "CNN", "Cloudflare R2", "Socket.IO"] },
+        { title: "Backend & APIs", description: "Lógica de negocio, autenticación, comunicación en tiempo real y límites de servicio.", technologies: ["TypeScript", "Node.js", "NestJS", "REST", "OpenAPI", "WebSockets", "WebRTC"] },
+        { title: "Cloud & IaC", description: "Arquitecturas en AWS y Cloudflare diseñadas para seguridad, escalabilidad y tolerancia a fallos, definidas como código.", technologies: ["AWS", "Terraform / HCL", "ECS", "Lambda", "API Gateway", "Cloudflare"] },
+        { title: "Data & Distributed Systems", description: "Persistencia relacional, NoSQL, flujos de eventos y procesamiento distribuido de datos.", technologies: ["PostgreSQL", "MySQL", "DynamoDB", "Kafka", "Apache Spark", "Cloudflare R2"] },
+        { title: "DevOps & Observability", description: "Contenedores, automatización de integración continua, despliegues seguros por entornos y monitorización.", technologies: ["Docker", "Linux", "GitHub Actions", "OIDC", "CloudWatch", "Grafana"] },
       ],
     },
     about: {
