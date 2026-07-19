@@ -27,7 +27,7 @@ function scrollTo(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
 }
 
-function ProjectVisual({ project, hint }: { project: { name: string; imagePath: string; imageAlt: string }; hint: string }) {
+function ProjectVisual({ project, hint }: { project: { name: string; imagePath: string; imageAlt: string; status: string }; hint: string }) {
   const [hasImage, setHasImage] = useState(true)
 
   return (
