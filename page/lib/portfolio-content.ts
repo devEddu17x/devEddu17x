@@ -113,7 +113,7 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
     },
     skills: {
       eyebrow: "TECHNICAL EDGE",
-      title: "Backend first. Cloud by design.",
+      title: "Core Stack & Domains",
       intro: "The areas where I do my best work: building reliable services, defining infrastructure as code, and making production delivery repeatable.",
       items: [
         { title: "Backend systems", description: "APIs, authentication, real-time communication, service boundaries, and documentation.", technologies: ["TypeScript", "Node.js", "NestJS", "REST", "OpenAPI", "WebSockets", "WebRTC"] },
@@ -204,7 +204,7 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
     },
     skills: {
       eyebrow: "FORTALEZAS TÉCNICAS",
-      title: "Backend primero. Cloud por diseño.",
+      title: "Stack principal y dominios",
       intro: "Las áreas donde aporto más valor: servicios confiables, infraestructura como código y una entrega a producción repetible.",
       items: [
         { title: "Sistemas backend", description: "APIs, autenticación, comunicación en tiempo real, límites de servicio y documentación.", technologies: ["TypeScript", "Node.js", "NestJS", "REST", "OpenAPI", "WebSockets", "WebRTC"] },
