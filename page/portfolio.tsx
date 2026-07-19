@@ -24,9 +24,9 @@ import {
   SiTypescript,
   SiNodedotjs,
   SiNestjs,
-  SiOpenapi,
+  SiOpenai,
   SiWebrtc,
-  SiAmazonaws,
+  SiAmazon,
   SiTerraform,
   SiCloudflare,
   SiPostgresql,
@@ -49,14 +49,14 @@ const techIconMap: Record<string, React.ComponentType<{ className?: string }>> =
   "Node.js": SiNodedotjs,
   "NestJS": SiNestjs,
   "REST": TbApi,
-  "OpenAPI": SiOpenapi,
+  "OpenAPI": SiOpenai,
   "WebSockets": SiSocketdotio,
   "WebRTC": SiWebrtc,
-  "AWS": SiAmazonaws,
+  "AWS": SiAmazon,
   "Terraform / HCL": SiTerraform,
-  "ECS": SiAmazonaws,
-  "Lambda": SiAmazonaws,
-  "API Gateway": SiAmazonaws,
+  "ECS": SiAmazon,
+  "Lambda": SiAmazon,
+  "API Gateway": SiAmazon,
   "Cloudflare": SiCloudflare,
   "PostgreSQL": SiPostgresql,
   "MySQL": SiMysql,
@@ -411,7 +411,7 @@ export default function Portfolio() {
             {content.skills.items.map((skill, index) => {
               const icons = [Server, Cloud, Database, Workflow]
               const Icon = icons[index]
-              
+
               // Theme settings for glows and highlights per domain
               const themes = [
                 {
@@ -439,9 +439,9 @@ export default function Portfolio() {
                   iconColor: "text-emerald-400",
                 }
               ]
-              
+
               const currentTheme = themes[index]
-              
+
               return (
                 <article
                   key={skill.title}
