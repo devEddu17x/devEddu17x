@@ -1,0 +1,240 @@
+"use client"
+
+import { FormEvent, useState } from "react"
+import {
+  ArrowDown,
+  ArrowUpRight,
+  Cloud,
+  Code2,
+  Database,
+  Download,
+  ExternalLink,
+  Github,
+  Linkedin,
+  Mail,
+  Menu,
+  Send,
+  Server,
+  Workflow,
+  X,
+} from "lucide-react"
+import { useLanguage } from "@/hooks/useLanguageContext"
+import { portfolioContent } from "@/lib/portfolio-content"
+
+const CONTACT_EMAIL = "contact@eddux.dev"
+
+function scrollTo(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+}
+
+function ProjectVisual({ project, hint }: { project: { name: string; imagePath: string; imageAlt: string }; hint: string }) {
+  const [hasImage, setHasImage] = useState(true)
+
+  return (
+    <div className="project-visual">
+      {hasImage && (
+        <img
+          src={project.imagePath}
+          alt={project.imageAlt}
+          className="h-full w-full object-cover"
+          onError={() => setHasImage(false)}
+        />
+      )}
+      {!hasImage && (
+        <div className="project-placeholder">
+          <div className="project-placeholder-grid" />
+          <Code2 className="relative mb-4 h-8 w-8 text-cyan-300" />
+          <p className="relative text-sm font-semibold text-white">{project.name}</p>
+          <p className="relative mt-1 max-w-xs text-center text-xs text-slate-400">{hint} <code>public{project.imagePath}</code></p>
+        </div>
+      )}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#070b17] via-transparent to-transparent" />
+      <div className="absolute bottom-4 left-4 flex items-center gap-2">
+        <span className="status-dot" />
+        <span className="text-xs font-medium text-white">{project.status}</span>
+      </div>
+    </div>
+  )
+}
+
+export default function Portfolio() {
+  const { language, toggleLanguage } = useLanguage()
+  const content = portfolioContent[language]
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" })
+
+  const navigate = (id: string) => {
+    setMenuOpen(false)
+    scrollTo(id)
+  }
+
+  const submitContact = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    const subject = form.subject || (language === "es" ? "Contacto desde eddux.dev" : "Contact from eddux.dev")
+    const body = `${language === "es" ? "Nombre" : "Name"}: ${form.name}\n${language === "es" ? "Correo" : "Email"}: ${form.email}\n\n${form.message}`
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  }
+
+  const navItems = [
+    ["projects", content.nav.projects],
+    ["skills", content.nav.skills],
+    ["about", content.nav.about],
+    ["contact", content.nav.contact],
+  ] as const
+
+  return (
+    <div className="min-h-screen overflow-x-hidden bg-[#070b17] text-slate-100 selection:bg-cyan-300 selection:text-slate-950">
+      <div className="site-noise" aria-hidden="true" />
+
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-[#070b17]/70 backdrop-blur-xl">
+        <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 lg:px-8">
+          <a href="#home" className="group flex items-center gap-3" aria-label="Eddu home">
+            <span className="grid h-9 w-9 place-items-center rounded-xl border border-cyan-300/30 bg-cyan-300/10 font-mono text-sm font-black text-cyan-200 transition group-hover:border-cyan-300/70">&lt;/&gt;</span>
+            <span className="text-lg font-semibold tracking-tight">eddu<span className="text-cyan-300">.</span></span>
+          </a>
+
+          <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
+            {navItems.map(([id, label]) => (
+              <button key={id} onClick={() => navigate(id)} className="nav-link">{label}</button>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <button onClick={toggleLanguage} className="language-toggle" aria-label={language === "en" ? "Cambiar a español" : "Switch to English"}>
+              <span className={language === "es" ? "text-white" : "text-slate-500"}>ES</span>
+              <span className="text-slate-700">/</span>
+              <span className={language === "en" ? "text-white" : "text-slate-500"}>EN</span>
+            </button>
+            <button onClick={() => navigate("contact")} className="hidden rounded-full bg-cyan-300 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 sm:block">{content.hero.contact}</button>
+            <button onClick={() => setMenuOpen(!menuOpen)} className="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-slate-200 lg:hidden" aria-label="Open menu">
+              {menuOpen ? <X size={19} /> : <Menu size={19} />}
+            </button>
+          </div>
+        </div>
+        {menuOpen && (
+          <nav className="border-t border-white/5 bg-[#0b1122] px-5 py-4 lg:hidden" aria-label="Mobile navigation">
+            <div className="mx-auto grid max-w-7xl gap-1">
+              {navItems.map(([id, label]) => <button key={id} onClick={() => navigate(id)} className="rounded-lg px-3 py-3 text-left text-sm text-slate-200 hover:bg-white/5">{label}</button>)}
+            </div>
+          </nav>
+        )}
+      </header>
+
+      <main>
+        <section id="home" className="relative isolate flex min-h-screen items-center overflow-hidden pt-20">
+          <div className="hero-orb hero-orb-one" aria-hidden="true" />
+          <div className="hero-orb hero-orb-two" aria-hidden="true" />
+          <div className="hero-grid" aria-hidden="true" />
+          <div className="relative mx-auto grid w-full max-w-7xl gap-14 px-5 py-20 lg:grid-cols-[1.35fr_.65fr] lg:px-8 lg:py-28">
+            <div className="max-w-4xl">
+              <p className="eyebrow"><span />{content.hero.eyebrow}</p>
+              <h1 className="mt-7 max-w-4xl text-5xl font-semibold leading-[.98] tracking-[-0.06em] text-white sm:text-7xl lg:text-8xl">
+                {content.hero.greeting}<br />
+                <span className="text-gradient">{content.hero.title}</span>
+              </h1>
+              <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">{content.hero.description}</p>
+              <div className="mt-10 flex flex-wrap gap-3">
+                <button onClick={() => navigate("contact")} className="button-primary">{content.hero.contact}<ArrowUpRight className="h-4 w-4" /></button>
+                <a href={content.hero.cvUrl} target="_blank" rel="noopener noreferrer" download={content.hero.cvFilename} className="button-secondary"><Download className="h-4 w-4" />{content.hero.cv}</a>
+              </div>
+              <div className="mt-10 flex items-center gap-4 text-sm text-slate-400">
+                <span className="status-dot" />{content.hero.basedIn}
+              </div>
+            </div>
+
+            <div className="relative flex items-end lg:justify-end">
+              <div className="hero-console w-full max-w-md">
+                <div className="flex items-center gap-2 border-b border-white/10 px-5 py-4"><span className="h-2 w-2 rounded-full bg-rose-400" /><span className="h-2 w-2 rounded-full bg-amber-300" /><span className="h-2 w-2 rounded-full bg-cyan-300" /><span className="ml-2 font-mono text-[10px] uppercase tracking-[.18em] text-slate-500">production.system</span></div>
+                <div className="space-y-5 p-6 font-mono text-sm leading-6">
+                  <p className="text-slate-500">$ engineer.profile</p>
+                  <p><span className="text-cyan-300">focus</span>: backend + cloud</p>
+                  <p><span className="text-cyan-300">delivery</span>: secure, scalable, observable</p>
+                  <p><span className="text-cyan-300">infra</span>: AWS · Cloudflare · Terraform</p>
+                  <div className="mt-7 border-t border-white/10 pt-5 text-xs text-slate-500">{language === "es" ? "sistemas en producción" : "systems in production"} <span className="ml-2 text-emerald-300">● operational</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid gap-4 border-t border-white/10 pt-8 sm:grid-cols-3 lg:col-span-2">
+              {content.proof.map((item) => <div key={item.label}><p className="text-3xl font-semibold tracking-tight text-white">{item.value}</p><p className="mt-1 text-sm text-slate-400">{item.label}</p></div>)}
+            </div>
+          </div>
+          <button onClick={() => navigate("projects")} className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-xs uppercase tracking-[.16em] text-slate-500 transition hover:text-cyan-200 md:flex"><ArrowDown size={14} />scroll</button>
+        </section>
+
+        <section id="projects" className="section-shell border-y border-white/5 bg-[#0a1020]/75">
+          <div className="section-heading">
+            <p className="eyebrow"><span />{content.projects.eyebrow}</p>
+            <h2>{content.projects.title}</h2>
+            <p>{content.projects.intro}</p>
+          </div>
+          <div className="mt-14 grid gap-7 xl:grid-cols-2">
+            {content.projects.items.map((project) => (
+              <article key={project.name} className="project-card">
+                <ProjectVisual project={project} hint={content.projects.mediaHint} />
+                <div className="p-6 sm:p-8">
+                  <div className="flex flex-wrap items-start justify-between gap-4">
+                    <div><h3 className="text-3xl font-semibold tracking-tight text-white">{project.name}</h3><p className="mt-1 text-sm text-cyan-200">{project.duration}</p></div>
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="icon-link" aria-label={`${content.projects.live}: ${project.name}`}><ExternalLink size={18} /></a>
+                  </div>
+                  <p className="mt-5 leading-7 text-slate-300">{project.description}</p>
+                  <ul className="mt-6 space-y-3 border-l border-cyan-300/30 pl-4 text-sm leading-6 text-slate-400">
+                    {project.impact.map((line) => <li key={line}>{line}</li>)}
+                  </ul>
+                  <div className="mt-8 grid gap-3">
+                    {[
+                      [content.projects.stack.frontend, project.frontend, "stack-row stack-row-frontend"],
+                      [content.projects.stack.backend, project.backend, "stack-row stack-row-backend"],
+                      [content.projects.stack.cloud, project.cloud, "stack-row stack-row-cloud"],
+                    ].map(([label, technologies, className]) => <div key={label as string} className={className as string}><p>{label as string}</p><div>{(technologies as string[]).map((technology) => <span key={technology}>{technology}</span>)}</div></div>)}
+                  </div>
+                  <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm">
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-semibold text-cyan-200 hover:text-white">{content.projects.demo}<ArrowUpRight size={15} /></a>
+                    {project.repos.map((repo) => <a key={repo.href} href={repo.href} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white">{repo.label}</a>)}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="skills" className="section-shell">
+          <div className="section-heading">
+            <p className="eyebrow"><span />{content.skills.eyebrow}</p>
+            <h2>{content.skills.title}</h2>
+            <p>{content.skills.intro}</p>
+          </div>
+          <div className="mt-14 grid gap-4 md:grid-cols-2">
+            {content.skills.items.map((skill, index) => {
+              const icons = [Server, Cloud, Database, Workflow]
+              const Icon = icons[index]
+              return <article key={skill.title} className="skill-card"><Icon className="h-6 w-6 text-cyan-200" /><h3>{skill.title}</h3><p>{skill.description}</p><div className="mt-6 flex flex-wrap gap-2">{skill.technologies.map((technology) => <span key={technology} className="tech-pill">{technology}</span>)}</div></article>
+            })}
+          </div>
+        </section>
+
+        <section id="about" className="section-shell border-y border-white/5 bg-[#0a1020]/75">
+          <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
+            <div className="lg:sticky lg:top-28"><p className="eyebrow"><span />{content.about.eyebrow}</p><h2 className="mt-6 max-w-xl text-4xl font-semibold leading-none tracking-[-.05em] text-white sm:text-5xl">{content.about.title}</h2></div>
+            <div><p className="text-2xl font-medium leading-9 text-cyan-50">{content.about.lead}</p><div className="mt-8 space-y-5 text-base leading-8 text-slate-300">{content.about.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div><div className="mt-10 grid gap-4 sm:grid-cols-2"><div className="detail-card"><p>{content.about.educationLabel}</p><strong>{content.about.education}</strong></div><div className="detail-card"><p>{content.about.languageLabel}</p><strong>{content.about.language}</strong></div></div></div>
+          </div>
+        </section>
+
+        <section id="contact" className="section-shell">
+          <div className="contact-panel">
+            <div><p className="eyebrow"><span />{content.contact.eyebrow}</p><h2 className="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-5xl">{content.contact.title}</h2><p className="mt-5 max-w-md leading-7 text-slate-300">{content.contact.intro}</p><div className="mt-10 space-y-4"><a href={`mailto:${CONTACT_EMAIL}`} className="contact-direct"><Mail size={18} /><span><small>{content.contact.emailLabel}</small>{CONTACT_EMAIL}</span></a><a href="https://github.com/devEddu17x" target="_blank" rel="noopener noreferrer" className="contact-direct"><Github size={18} /><span><small>GitHub</small>github.com/devEddu17x</span></a><a href="https://linkedin.com/in/eduardodevts" target="_blank" rel="noopener noreferrer" className="contact-direct"><Linkedin size={18} /><span><small>LinkedIn</small>linkedin.com/in/eduardodevts</span></a></div></div>
+            <form onSubmit={submitContact} className="contact-form">
+              <div className="grid gap-4 sm:grid-cols-2"><label>{content.contact.name}<input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} autoComplete="name" /></label><label>{content.contact.email}<input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} autoComplete="email" /></label></div>
+              <label>{content.contact.subject}<input required value={form.subject} onChange={(e) => setForm({ ...form, subject: e.target.value })} /></label>
+              <label>{content.contact.message}<textarea required rows={6} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} /></label>
+              <button className="button-primary w-full justify-center" type="submit">{content.contact.send}<Send size={16} /></button>
+              <p className="text-center text-xs text-slate-500">{content.contact.formNote}</p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-white/5 px-5 py-8 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between"><p>© {new Date().getFullYear()} eddu.</p><p>{content.footer}</p><div className="flex gap-4"><a href="https://github.com/devEddu17x" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-cyan-200"><Github size={18} /></a><a href="https://linkedin.com/in/eduardodevts" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-cyan-200"><Linkedin size={18} /></a></div></div></footer>
+    </div>
+  )
+}
