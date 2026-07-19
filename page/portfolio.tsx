@@ -125,7 +125,7 @@ export default function Portfolio() {
           <div className="hero-orb hero-orb-one" aria-hidden="true" />
           <div className="hero-orb hero-orb-two" aria-hidden="true" />
           <div className="hero-grid" aria-hidden="true" />
-          <div className="relative mx-auto grid w-full max-w-7xl gap-14 px-5 py-20 lg:grid-cols-[1.35fr_.65fr] lg:px-8 lg:py-28">
+          <div className="relative mx-auto grid w-full max-w-7xl gap-14 px-5 lg:grid-cols-[1.3fr_.7fr] lg:px-8">
             <div className="max-w-4xl">
               <p className="eyebrow"><span />{content.hero.eyebrow}</p>
               <h1 className="mt-7 max-w-4xl text-5xl font-semibold leading-[.98] tracking-[-0.06em] text-white sm:text-7xl lg:text-8xl">
@@ -142,21 +142,175 @@ export default function Portfolio() {
               </div>
             </div>
 
-            <div className="relative flex items-end lg:justify-end">
-              <div className="hero-console w-full max-w-md">
-                <div className="flex items-center gap-2 border-b border-white/10 px-5 py-4"><span className="h-2 w-2 rounded-full bg-rose-400" /><span className="h-2 w-2 rounded-full bg-amber-300" /><span className="h-2 w-2 rounded-full bg-cyan-300" /><span className="ml-2 font-mono text-[10px] uppercase tracking-[.18em] text-slate-500">production.system</span></div>
+            <div className="relative flex items-start lg:justify-end w-full max-w-md lg:ml-auto">
+              {/* Profile Image Card */}
+              <div className="relative group w-full">
+                {/* Glowing background gradient with animations on hover */}
+                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 opacity-70 blur-xl transition duration-700 group-hover:opacity-100 group-hover:blur-2xl group-hover:from-cyan-500/30 group-hover:to-purple-500/30" />
+
+                {/* Corner accents - futuristic brackets */}
+                <div className="absolute -top-1.5 -left-1.5 h-4 w-4 border-t-2 border-l-2 border-cyan-400/80 z-20 transition-all duration-300 group-hover:-top-3 group-hover:-left-3" />
+                <div className="absolute -top-1.5 -right-1.5 h-4 w-4 border-t-2 border-r-2 border-cyan-400/80 z-20 transition-all duration-300 group-hover:-top-3 group-hover:-right-3" />
+                <div className="absolute -bottom-1.5 -left-1.5 h-4 w-4 border-b-2 border-l-2 border-cyan-400/80 z-20 transition-all duration-300 group-hover:-bottom-3 group-hover:-left-3" />
+                <div className="absolute -bottom-1.5 -right-1.5 h-4 w-4 border-b-2 border-r-2 border-cyan-400/80 z-20 transition-all duration-300 group-hover:-bottom-3 group-hover:-right-3" />
+
+                {/* Outer container */}
+                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#070b17]/80 p-3 shadow-2xl backdrop-blur-sm transition-all duration-500 group-hover:border-cyan-500/30">
+
+                  {/* Inner image container */}
+                  <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#0b1224] border border-white/5">
+                    <img
+                      src="/me.webp"
+                      alt="Eduardo (Eddu)"
+                      className="h-full w-full object-cover transition-all duration-700 ease-out group-hover:scale-[1.03]"
+                    />
+
+                    {/* Tech overlay grid */}
+                    <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(103,232,249,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(103,232,249,0.03)_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)]" />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#070b17]/90 via-transparent to-transparent opacity-80" />
+
+                    {/* Top bar tech indicators */}
+                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between font-mono text-[9px] text-cyan-300/80 bg-[#070b17]/50 backdrop-blur-sm px-2.5 py-1 rounded border border-white/5">
+                      <span className="flex items-center gap-1.5">
+                        <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping" />
+                        <span>CAPTURING_</span>
+                      </span>
+                      <span>0x4f8a // {language === "es" ? "INGENIERO" : "ENGINEER"}</span>
+                    </div>
+
+                    {/* Bottom banner details */}
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between rounded-lg border border-cyan-500/20 bg-[#070b17]/90 px-3.5 py-2.5 backdrop-blur-md shadow-lg">
+                      <div className="flex items-center gap-2">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        <span className="font-mono text-[10px] font-bold tracking-wider text-slate-200">ENG.STATUS: ACTIVE</span>
+                      </div>
+                      <span className="font-mono text-[10px] text-slate-400">PERU // UTC-5</span>
+                    </div>
+                  </div>
+
+                  {/* Metadata footer */}
+                  <div className="mt-3.5 px-1 pb-1.5 font-mono text-[10px] text-slate-500 flex justify-between items-center border-t border-white/5 pt-3">
+                    <span className="flex items-center gap-1">
+                      <span className="text-cyan-400">&gt;</span>
+                      <span>{language === "es" ? "cámara.activa" : "cam.active"}</span>
+                    </span>
+                    <span>v1.0.4</span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <button onClick={() => navigate("stats")} className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-xs uppercase tracking-[.16em] text-slate-500 transition hover:text-cyan-200 md:flex"><ArrowDown size={14} />scroll</button>
+        </section>
+
+        <section id="stats" className="relative isolate flex flex-col min-h-screen justify-center overflow-hidden border-b border-white/5 bg-[#0a1020]/20 py-24">
+          <div className="hero-grid" aria-hidden="true" />
+
+          <div className="relative mx-auto w-full max-w-7xl px-5 lg:px-8 mb-10 text-left">
+            <div className="flex items-center gap-3">
+              <span className="block h-[1px] w-10 bg-cyan-300/80" />
+              <h2 className="font-mono text-sm sm:text-base font-black tracking-[.25em] text-cyan-200 uppercase">
+                {language === "es" ? "RENDIMIENTO & TELEMETRÍA" : "METRICS & TELEMETRY"}
+              </h2>
+            </div>
+          </div>
+
+          <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-5 lg:grid-cols-[1.3fr_.7fr] lg:items-center lg:px-8">
+            {/* Left Column: Console terminal Card */}
+            <div className="w-full">
+              <div className="hero-console w-full max-w-2xl transition-all duration-500 hover:border-cyan-500/30">
+                <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+                  <div className="flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-rose-400" />
+                    <span className="h-2 w-2 rounded-full bg-amber-300" />
+                    <span className="h-2 w-2 rounded-full bg-cyan-300" />
+                    <span className="ml-2 font-mono text-[10px] uppercase tracking-[.18em] text-slate-500">production.system</span>
+                  </div>
+                  <span className="font-mono text-[9px] text-emerald-400/80 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20 animate-pulse">CONNECTED</span>
+                </div>
                 <div className="space-y-5 p-6 font-mono text-sm leading-6">
-                  <p className="text-slate-500">$ engineer.profile</p>
-                  <p><span className="text-cyan-300">focus</span>: backend + cloud</p>
-                  <p><span className="text-cyan-300">delivery</span>: secure, scalable, observable</p>
-                  <p><span className="text-cyan-300">infra</span>: AWS · Cloudflare · Terraform</p>
-                  <div className="mt-7 border-t border-white/10 pt-5 text-xs text-slate-500">{language === "es" ? "sistemas en producción" : "systems in production"} <span className="ml-2 text-emerald-300">● operational</span></div>
+                  <p className="text-slate-300">$ engineer.profile</p>
+                  <div className="grid gap-5 sm:grid-cols-2 border-t border-white/5 pt-4">
+                    <div>
+                      <span className="block text-[11px] text-cyan-300/90 mb-1 font-semibold">architectures //</span>
+                      <p className="text-slate-200 font-semibold text-xs sm:text-sm font-mono">Serverless · Distributed, Event-Driven</p>
+                    </div>
+                    <div>
+                      <span className="block text-[11px] text-cyan-300/90 mb-1 font-semibold">realtime_data //</span>
+                      <p className="text-slate-200 font-semibold text-xs sm:text-sm font-mono">WebSockets · WebRTC (P2P)</p>
+                    </div>
+                    <div>
+                      <span className="block text-[11px] text-cyan-300/90 mb-1 font-semibold">deployment //</span>
+                      <p className="text-slate-200 font-semibold text-xs sm:text-sm font-mono">Automated CI/CD · OIDC, Multi-AZ</p>
+                    </div>
+                    <div>
+                      <span className="block text-[11px] text-cyan-300/90 mb-1 font-semibold">provisioning //</span>
+                      <p className="text-slate-200 font-semibold text-xs sm:text-sm font-mono">Infrastructure as Code (IaC)</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="grid gap-4 border-t border-white/10 pt-8 sm:grid-cols-3 lg:col-span-2">
-              {content.proof.map((item) => <div key={item.label}><p className="text-3xl font-semibold tracking-tight text-white">{item.value}</p><p className="mt-1 text-sm text-slate-400">{item.label}</p></div>)}
+            {/* Right Column: Statistics stacked vertically */}
+            <div className="w-full max-w-md lg:ml-auto">
+              <div className="grid gap-3 w-full sm:grid-cols-3 lg:grid-cols-1">
+                {content.proof.map((item, idx) => {
+                  const textColors = [
+                    "text-cyan-300",
+                    "text-purple-300",
+                    "text-emerald-300"
+                  ]
+                  const borderColors = [
+                    "group-hover/stat:border-cyan-500/30",
+                    "group-hover/stat:border-purple-500/30",
+                    "group-hover/stat:border-emerald-500/30"
+                  ]
+                  const leftBorders = [
+                    "group-hover/stat:bg-cyan-400",
+                    "group-hover/stat:bg-purple-400",
+                    "group-hover/stat:bg-emerald-400"
+                  ]
+                  const glows = [
+                    "hover:shadow-[0_0_30px_rgba(34,211,238,0.08)]",
+                    "hover:shadow-[0_0_30px_rgba(168,85,247,0.08)]",
+                    "hover:shadow-[0_0_30px_rgba(16,185,129,0.08)]"
+                  ]
+
+                  return (
+                    <div
+                      key={item.label}
+                      className={`relative group/stat overflow-hidden rounded-xl border border-white/5 bg-slate-950/40 p-5 shadow-2xl transition-all duration-300 ${borderColors[idx]} hover:bg-[#0a1020]/60 ${glows[idx]}`}
+                    >
+                      {/* Left border glow indicator */}
+                      <div className={`absolute left-0 top-0 bottom-0 w-[3px] bg-slate-800 transition-all duration-300 ${leftBorders[idx]}`} />
+
+                      <div className="pl-2">
+                        <p className={`text-5xl font-black tracking-tight ${textColors[idx]} font-mono`}>
+                          {item.value}
+                        </p>
+
+                        <p className="mt-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-white leading-relaxed">
+                          {item.label}
+                        </p>
+
+                        {/* Technical detail: visual progress bar */}
+                        <div className="mt-4 flex items-center gap-2">
+                          <div className="h-1 flex-1 bg-slate-800/80 rounded-full overflow-hidden">
+                            <div className={`h-full rounded-full bg-slate-700 transition-all duration-500 group-hover/stat:w-full w-2/3`} />
+                          </div>
+                          <span className="font-mono text-[8px] text-slate-600">L.0{idx + 1}</span>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
             </div>
           </div>
           <button onClick={() => navigate("projects")} className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-xs uppercase tracking-[.16em] text-slate-500 transition hover:text-cyan-200 md:flex"><ArrowDown size={14} />scroll</button>
@@ -214,89 +368,9 @@ export default function Portfolio() {
         </section>
 
         <section id="about" className="section-shell border-y border-white/5 bg-[#0a1020]/75">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-start">
-            <div className="lg:sticky lg:top-28">
-              <div className="relative group max-w-md mx-auto lg:mx-0 w-full">
-                {/* Glowing background gradient with animations on hover */}
-                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 opacity-70 blur-xl transition duration-700 group-hover:opacity-100 group-hover:blur-2xl group-hover:from-cyan-500/30 group-hover:to-purple-500/30" />
-                
-                {/* Corner accents - futuristic brackets */}
-                <div className="absolute -top-1.5 -left-1.5 h-4 w-4 border-t-2 border-l-2 border-cyan-400/80 z-20 transition-all duration-300 group-hover:-top-3 group-hover:-left-3" />
-                <div className="absolute -top-1.5 -right-1.5 h-4 w-4 border-t-2 border-r-2 border-cyan-400/80 z-20 transition-all duration-300 group-hover:-top-3 group-hover:-right-3" />
-                <div className="absolute -bottom-1.5 -left-1.5 h-4 w-4 border-b-2 border-l-2 border-cyan-400/80 z-20 transition-all duration-300 group-hover:-bottom-3 group-hover:-left-3" />
-                <div className="absolute -bottom-1.5 -right-1.5 h-4 w-4 border-b-2 border-r-2 border-cyan-400/80 z-20 transition-all duration-300 group-hover:-bottom-3 group-hover:-right-3" />
-
-                {/* Outer container */}
-                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#070b17]/80 p-3 shadow-2xl backdrop-blur-sm transition-all duration-500 group-hover:border-cyan-500/30">
-                  
-                  {/* Inner image container */}
-                  <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#0b1224] border border-white/5">
-                    <img
-                      src="/me.webp"
-                      alt="Eduardo (Eddu)"
-                      className="h-full w-full object-cover transition-all duration-700 ease-out group-hover:scale-[1.03]"
-                    />
-                    
-                    {/* Tech overlay grid */}
-                    <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(103,232,249,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(103,232,249,0.03)_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)]" />
-                    
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#070b17]/90 via-transparent to-transparent opacity-80" />
-
-                    {/* Top bar tech indicators */}
-                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between font-mono text-[9px] text-cyan-300/80 bg-[#070b17]/50 backdrop-blur-sm px-2.5 py-1 rounded border border-white/5">
-                      <span className="flex items-center gap-1.5">
-                        <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping" />
-                        <span>CAPTURING_</span>
-                      </span>
-                      <span>0x4f8a // {language === "es" ? "SOBRE_MÍ" : "ABOUT_ME"}</span>
-                    </div>
-
-                    {/* Bottom banner details */}
-                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between rounded-lg border border-cyan-500/20 bg-[#070b17]/90 px-3.5 py-2.5 backdrop-blur-md shadow-lg">
-                      <div className="flex items-center gap-2">
-                        <span className="relative flex h-2 w-2">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                        </span>
-                        <span className="font-mono text-[10px] font-bold tracking-wider text-slate-200">ENG.STATUS: ACTIVE</span>
-                      </div>
-                      <span className="font-mono text-[10px] text-slate-400">PERU // UTC-5</span>
-                    </div>
-                  </div>
-
-                  {/* Metadata footer */}
-                  <div className="mt-3.5 px-1 pb-1.5 font-mono text-[10px] text-slate-500 flex justify-between items-center border-t border-white/5 pt-3">
-                    <span className="flex items-center gap-1">
-                      <span className="text-cyan-400">&gt;</span>
-                      <span>{language === "es" ? "ingeniero.profile" : "engineer.profile"}</span>
-                    </span>
-                    <span>v1.0.4</span>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <p className="eyebrow"><span />{content.about.eyebrow}</p>
-              <h2 className="mt-6 max-w-xl text-4xl font-semibold leading-none tracking-[-.05em] text-white sm:text-5xl">{content.about.title}</h2>
-              <p className="mt-8 text-2xl font-medium leading-9 text-cyan-50">{content.about.lead}</p>
-              <div className="mt-8 space-y-5 text-base leading-8 text-slate-300">
-                {content.about.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-              <div className="mt-10 grid gap-4 sm:grid-cols-2">
-                <div className="detail-card">
-                  <p>{content.about.educationLabel}</p>
-                  <strong>{content.about.education}</strong>
-                </div>
-                <div className="detail-card">
-                  <p>{content.about.languageLabel}</p>
-                  <strong>{content.about.language}</strong>
-                </div>
-              </div>
-            </div>
+          <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
+            <div className="lg:sticky lg:top-28"><p className="eyebrow"><span />{content.about.eyebrow}</p><h2 className="mt-6 max-w-xl text-4xl font-semibold leading-none tracking-[-.05em] text-white sm:text-5xl">{content.about.title}</h2></div>
+            <div><p className="text-2xl font-medium leading-9 text-cyan-50">{content.about.lead}</p><div className="mt-8 space-y-5 text-base leading-8 text-slate-300">{content.about.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div><div className="mt-10 grid gap-4 sm:grid-cols-2"><div className="detail-card"><p>{content.about.educationLabel}</p><strong>{content.about.education}</strong></div><div className="detail-card"><p>{content.about.languageLabel}</p><strong>{content.about.language}</strong></div></div></div>
           </div>
         </section>
 
