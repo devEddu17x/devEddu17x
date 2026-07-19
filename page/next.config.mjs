@@ -1,5 +1,16 @@
 /** @type {import('next').NextConfig} */
+const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH?.trim() || "";
+const normalizedBasePath = rawBasePath
+  ? `/${rawBasePath.replace(/^\/+|\/+$/g, "")}`
+  : "";
+
 const nextConfig = {
+  ...(normalizedBasePath
+    ? {
+        basePath: normalizedBasePath,
+        assetPrefix: `${normalizedBasePath}/`,
+      }
+    : {}),
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -9,6 +20,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
