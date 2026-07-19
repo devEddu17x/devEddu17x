@@ -35,6 +35,9 @@ const techIconMap: Record<string, React.ComponentType<{ className?: string }>> =
   "WebRTC": SiWebrtc,
   "AWS": SiAmazon,
   "Terraform / HCL": SiTerraform,
+  "Terraform": SiTerraform,
+  "Aurora (AWS)": SiAmazon,
+  "S3": SiAmazon,
   "ECS": SiAmazon,
   "Lambda": SiAmazon,
   "API Gateway": SiAmazon,
@@ -51,6 +54,37 @@ const techIconMap: Record<string, React.ComponentType<{ className?: string }>> =
   "OIDC": TbCertificate,
   "CloudWatch": TbActivity,
   "Grafana": SiGrafana,
+}
+
+const techColorMap: Record<string, string> = {
+  "TypeScript": "text-[#3178c6]",
+  "Node.js": "text-[#5FA04E]",
+  "NestJS": "text-[#E0234E]",
+  "REST": "text-cyan-400",
+  "OpenAPI": "text-[#85EA2D]",
+  "WebSockets": "text-[#387BCC]",
+  "WebRTC": "text-[#FF6E14]",
+  "AWS": "text-[#FF9900]",
+  "Terraform / HCL": "text-[#844FBA]",
+  "Terraform": "text-[#844FBA]",
+  "Aurora (AWS)": "text-[#FF9900]",
+  "S3": "text-[#FF9900]",
+  "ECS": "text-[#FF9900]",
+  "Lambda": "text-[#FF9900]",
+  "API Gateway": "text-[#FF9900]",
+  "Cloudflare": "text-[#F38020]",
+  "PostgreSQL": "text-[#4169E1]",
+  "MySQL": "text-[#00758F]",
+  "DynamoDB": "text-[#2C8EBB]",
+  "Kafka": "text-white",
+  "Apache Spark": "text-[#E25A1C]",
+  "Cloudflare R2": "text-[#F38020]",
+  "Docker": "text-[#2496ED]",
+  "Linux": "text-[#FCC624]",
+  "GitHub Actions": "text-[#2088FF]",
+  "OIDC": "text-amber-400",
+  "CloudWatch": "text-[#FF4F8B]",
+  "Grafana": "text-[#F9A03F]"
 }
 
 export default function SkillsSection() {
@@ -118,27 +152,24 @@ export default function SkillsSection() {
 
               <div className="relative z-10">
                 <div className="flex items-center gap-4">
-                  <div className="rounded-xl border border-white/10 bg-slate-900/50 p-3 transition-transform duration-500 group-hover:scale-110 group-hover:border-white/20">
+                  {/*                   <div className="rounded-xl border border-white/10 bg-slate-900/50 p-3 transition-transform duration-500 group-hover:scale-110 group-hover:border-white/20">
                     <Icon className={`h-6 w-6 ${currentTheme.iconColor} transition-transform duration-500 group-hover:rotate-6`} />
-                  </div>
+                  </div> */}
                   <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-cyan-200 transition-colors">
                     {skill.title}
                   </h3>
                 </div>
 
-                <p className="mt-4 text-sm leading-relaxed text-slate-300">
-                  {skill.description}
-                </p>
-
                 <div className="mt-8 flex flex-wrap gap-2.5">
                   {skill.technologies.map((technology) => {
                     const TechIcon = techIconMap[technology]
+                    const iconColor = techColorMap[technology] || "text-slate-400"
                     return (
                       <span
                         key={technology}
-                        className="inline-flex items-center gap-1.5 rounded-lg border border-white/5 bg-slate-900/40 px-3 py-1.5 font-mono text-[11px] font-semibold text-slate-300 shadow-md backdrop-blur-sm transition-all duration-300 hover:border-cyan-500/20 hover:bg-slate-900/80 hover:text-white"
+                        className="inline-flex items-center gap-2.5 rounded-lg border border-white/10 bg-slate-950/60 px-3.5 py-2 font-mono text-[12.5px] font-semibold text-slate-200 shadow-md backdrop-blur-sm transition-all duration-300 hover:border-cyan-500/30 hover:bg-slate-900/90 hover:text-white"
                       >
-                        {TechIcon && <TechIcon className="h-3.5 w-3.5" />}
+                        {TechIcon && <TechIcon className={`h-[30px] w-[30px] ${iconColor} shrink-0`} />}
                         <span>{technology}</span>
                       </span>
                     )

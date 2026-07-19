@@ -15,12 +15,12 @@ export default function StatsSection({ navigate }: StatsSectionProps) {
   return (
     <section id="stats" className="relative isolate flex flex-col min-h-screen justify-center overflow-hidden border-b border-white/5 bg-[#0a1020]/20 py-24">
       <div className="hero-grid" aria-hidden="true" />
-      
+
       <div className="relative mx-auto w-full max-w-7xl px-5 lg:px-8 mb-10 text-left">
         <div className="flex items-center gap-3">
           <span className="block h-[1px] w-10 bg-cyan-300/80" />
           <h2 className="font-mono text-sm sm:text-base font-black tracking-[.25em] text-cyan-200 uppercase">
-            {language === "es" ? "RENDIMIENTO & TELEMETRÍA" : "METRICS & TELEMETRY"}
+            {language === "es" ? "METRICAS & DATOS" : "METRICS & DATA"}
           </h2>
         </div>
       </div>
@@ -93,7 +93,7 @@ export default function StatsSection({ navigate }: StatsSectionProps) {
                 "hover:shadow-[0_0_30px_rgba(168,85,247,0.08)]",
                 "hover:shadow-[0_0_30px_rgba(16,185,129,0.08)]"
               ]
-              
+
               return (
                 <div
                   key={item.label}
@@ -106,11 +106,11 @@ export default function StatsSection({ navigate }: StatsSectionProps) {
                     <p className={`text-5xl font-black tracking-tight ${textColors[idx]} font-mono`}>
                       {item.value}
                     </p>
-                    
+
                     <p className="mt-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-white leading-relaxed">
                       {item.label}
                     </p>
-                    
+
                     {/* Technical detail: visual progress bar */}
                     <div className="mt-4 flex items-center gap-2">
                       <div className="h-1 flex-1 bg-slate-800/80 rounded-full overflow-hidden">
