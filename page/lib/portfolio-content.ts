@@ -125,10 +125,10 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
     about: {
       eyebrow: "ABOUT",
       title: "I care about what happens after the code ships.",
-      lead: "My core is backend and cloud. DevOps is the capability that lets me take responsibility for the whole path to production.",
+      lead: "I build software by taking full ownership: from API architecture to stable cloud operations.",
       paragraphs: [
-        "I build APIs and systems with the operational side in mind: identity, networking, secrets, delivery pipelines, observability, and recovery are part of the design—not an afterthought.",
-        "I have spent years working with Docker and Linux, and now work confidently across AWS, Cloudflare, and Terraform. That makes it possible to move from a product requirement to a deployable, maintained service without losing sight of the backend.",
+        "I have a deep inclination towards infrastructure and automation. I don't see development and deployment as isolated phases, but as a single engineering flow.",
+        "I build robust backends with Node.js and TypeScript, and define their environment in AWS via code (Terraform), ensuring every piece is secure, scalable, and observable by design.",
       ],
       educationLabel: "Professional education",
       education: "Systems Engineering & Artificial Intelligence",
@@ -216,10 +216,10 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
     about: {
       eyebrow: "SOBRE MÍ",
       title: "Me importa lo que pasa después de desplegar el código.",
-      lead: "Mi núcleo es backend y cloud. DevOps es la capacidad que me permite hacerme responsable de todo el camino a producción.",
+      lead: "Desarrollo software asumiendo la responsabilidad total: desde la arquitectura de la API hasta su operación estable en la nube.",
       paragraphs: [
-        "Construyo APIs y sistemas considerando su operación: identidad, red, secretos, pipelines de entrega, observabilidad y recuperación forman parte del diseño, no llegan al final.",
-        "Llevo años trabajando con Docker y Linux, y actualmente me muevo con soltura entre AWS, Cloudflare y Terraform. Eso me permite convertir una necesidad de producto en un servicio desplegable y mantenible sin perder de vista el backend.",
+        "Tengo una inclinación profunda hacia la infraestructura y la automatización. No veo el desarrollo y el despliegue como fases aisladas, sino como un único flujo de ingeniería.",
+        "Construyo backends robustos con Node.js y TypeScript, y defino su entorno en AWS mediante código (Terraform), asegurando que cada pieza sea segura, escalable y observable por diseño.",
       ],
       educationLabel: "Formación profesional",
       education: "Ingeniería de Sistemas e Inteligencia Artificial",
