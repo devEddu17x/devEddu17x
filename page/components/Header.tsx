@@ -33,9 +33,11 @@ export default function Header({ navigate, menuOpen, setMenuOpen }: HeaderProps)
             navigate("home")
           }}
         >
-          <span className="grid h-9 w-9 place-items-center rounded-xl border border-cyan-300/30 bg-cyan-300/10 font-mono text-sm font-black text-cyan-200 transition group-hover:border-cyan-300/70">
-            &lt;/&gt;
-          </span>
+          <img
+            src="/logo.webp"
+            alt="Eddu logo"
+            className="h-9 w-9 rounded-xl border border-cyan-300/30 object-cover transition group-hover:border-cyan-300/70"
+          />
           <span className="text-lg font-semibold tracking-tight">
             eddu<span className="text-cyan-300">.</span>
           </span>
