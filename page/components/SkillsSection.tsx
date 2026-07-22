@@ -92,7 +92,7 @@ export default function SkillsSection() {
   const content = portfolioContent[language]
 
   return (
-    <section id="skills" className="section-shell">
+    <section id="skills" className="section-shell border-y border-white/5 bg-[#0a1020]/75">
       <div className="section-heading">
         <p className="eyebrow"><span />{content.skills.eyebrow}</p>
         <h2>{content.skills.title}</h2>

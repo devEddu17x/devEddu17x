@@ -8,7 +8,7 @@ export default function AboutSection() {
   const content = portfolioContent[language]
 
   return (
-    <section id="about" className="section-shell border-y border-white/5 bg-[#0a1020]/75">
+    <section id="about" className="section-shell">
       <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
         <div className="lg:sticky lg:top-28">
           <p className="eyebrow"><span />{content.about.eyebrow}</p>

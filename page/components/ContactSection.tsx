@@ -45,7 +45,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="section-shell">
+    <section id="contact" className="section-shell border-y border-white/5 bg-[#0a1020]/75">
       <div className="contact-panel">
         <div>
           <p className="eyebrow"><span />{content.contact.eyebrow}</p>

@@ -13,7 +13,7 @@ export default function StatsSection({ navigate }: StatsSectionProps) {
   const content = portfolioContent[language]
 
   return (
-    <section id="stats" className="relative isolate flex flex-col min-h-screen justify-center overflow-hidden border-b border-white/5 bg-[#0a1020]/20 py-24">
+    <section id="stats" className="relative isolate flex flex-col min-h-screen justify-center overflow-hidden border-y border-white/5 bg-[#0a1020]/75 py-24">
       <div className="hero-grid" aria-hidden="true" />
 
       <div className="relative mx-auto w-full max-w-7xl px-5 lg:px-8 mb-10 text-left">

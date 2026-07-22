@@ -40,7 +40,7 @@ export default function ProjectsSection() {
   const content = portfolioContent[language]
 
   return (
-    <section id="projects" className="section-shell border-y border-white/5 bg-[#0a1020]/75">
+    <section id="projects" className="section-shell">
       <div className="section-heading">
         <p className="eyebrow"><span />{content.projects.eyebrow}</p>
         <h2>{content.projects.title}</h2>
