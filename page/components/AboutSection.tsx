@@ -52,10 +52,10 @@ export default function AboutSection() {
 
         {/* Right column card */}
         <div>
-          <div className="detail-card p-5 border border-white/5 bg-[#070b17]/30 rounded-xl relative overflow-hidden group hover:border-cyan-500/20 transition-all duration-300 h-full">
-            <div className="absolute top-0 left-0 w-1 h-full bg-slate-700/50 group-hover:bg-slate-700 transition-colors" />
+          <div className="detail-card p-6 border border-white/5 bg-[#070b17]/50 rounded-xl relative overflow-hidden group hover:border-cyan-500/20 transition-all duration-300 h-full">
+            <div className="absolute top-0 left-0 w-1 h-full bg-cyan-500/30 group-hover:bg-cyan-500 transition-colors" />
             <div className="pl-4">
-              <p className="font-mono text-xs text-slate-500 uppercase tracking-widest mb-1">
+              <p className="font-mono text-xs text-cyan-300/80 uppercase tracking-widest mb-1.5">
                 {content.about.languageLabel}
               </p>
               <strong className="text-base text-slate-200">
