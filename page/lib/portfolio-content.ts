@@ -81,7 +81,7 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
     proof: [
       { value: "4+", label: "years building software" },
       { value: "4K+", label: "GitHub contributions" },
-      { value: "02", label: "live products" },
+      { value: "02", label: "products owner" },
     ],
     projects: {
       eyebrow: "SELECTED WORK",
@@ -149,9 +149,9 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
       success: "Message sent successfully! I will reply as soon as possible.",
       error: "Could not send message. Please try again or write directly to contact@eddux.dev",
       direct: "Or write directly",
-      formNote: "Your message will be sent directly as an instant notification.",
+      formNote: "Your message will be sent instantly.",
     },
-    footer: "Backend & Cloud Engineer · Peru",
+    footer: "Backend & Cloud Engineer · Perú",
   },
   es: {
     nav: { projects: "Proyectos", skills: "Fortalezas técnicas", about: "Sobre mí", contact: "Contacto" },
@@ -173,7 +173,7 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
     ],
     projects: {
       eyebrow: "TRABAJO DESTACADO",
-      title: "Productos reales. Responsabilidad de punta a punta.",
+      title: "Productos reales. Responsabilidad técnica total.",
       intro: "Desde un sistema de producción para un cliente hasta una startup en tiempo real, asumo aplicación, arquitectura cloud, entrega y operación.",
       live: "Abrir producto",
       source: "Código",
@@ -198,7 +198,7 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
           duration: "hace 3 meses",
           imageAlt: "Interfaz de videollamada MeetOne",
           description: "Plataforma de intercambio de idiomas que empareja personas para practicar con audio y video directamente desde el navegador.",
-          impact: ["Llamadas P2P con WebRTC, señalización WebSocket y matchmaking", "Plano de control serverless con Lambda, API Gateway, Cognito y DynamoDB", "Evita operar un TURN propio mediante relay gestionado de Cloudflare Calls"],
+          impact: ["Llamadas P2P con WebRTC, señalización WebSocket y matchmaking", "Plano de control serverless con Lambda, API Gateway, Cognito y DynamoDB", "Integración de Cloudflare Calls como fallback de P2P"],
           frontend: ["Vue 3", "Vite", "Pinia", "AWS Amplify"],
           backend: ["Lambdas Node.js", "WebSockets", "WebRTC", "Matchmaking"],
           cloud: ["AWS Lambda", "API Gateway", "DynamoDB", "Cognito", "Terraform", "Cloudflare Calls"],
@@ -243,7 +243,7 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
       success: "¡Mensaje enviado con éxito! Te responderé lo antes posible.",
       error: "No se pudo enviar el mensaje. Intenta de nuevo o escribe a contact@eddux.dev",
       direct: "O escríbeme directamente",
-      formNote: "Tu mensaje se enviará directamente por notificación instantánea.",
+      formNote: "Tu mensaje me llegará inmediatamente.",
     },
     footer: "Backend & Cloud Engineer · Perú",
   },
