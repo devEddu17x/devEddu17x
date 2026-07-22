@@ -32,7 +32,7 @@ export type PortfolioContent = {
   projects: { eyebrow: string; title: string; intro: string; live: string; source: string; demo: string; mediaHint: string; stack: { frontend: string; backend: string; cloud: string }; items: Project[] }
   skills: { eyebrow: string; title: string; intro: string; items: { title: string; description: string; technologies: string[] }[] }
   about: { eyebrow: string; title: string; lead: string; paragraphs: string[]; educationLabel: string; education: string; languageLabel: string; language: string }
-  contact: { eyebrow: string; title: string; intro: string; emailLabel: string; name: string; email: string; subject: string; message: string; send: string; direct: string; formNote: string }
+  contact: { eyebrow: string; title: string; intro: string; emailLabel: string; name: string; email: string; subject: string; message: string; send: string; sending: string; success: string; error: string; direct: string; formNote: string }
   footer: string
 }
 
@@ -144,9 +144,12 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
       email: "Email",
       subject: "Subject",
       message: "Message",
-      send: "Open email draft",
+      send: "Send message",
+      sending: "Sending...",
+      success: "Message sent successfully! I will reply as soon as possible.",
+      error: "Could not send message. Please try again or write directly to contact@eddux.dev",
       direct: "Or write directly",
-      formNote: "The form opens your email client with the message prepared.",
+      formNote: "Your message will be sent directly as an instant notification.",
     },
     footer: "Backend & Cloud Engineer · Peru",
   },
@@ -235,9 +238,12 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
       email: "Correo",
       subject: "Asunto",
       message: "Mensaje",
-      send: "Abrir borrador de correo",
+      send: "Enviar mensaje",
+      sending: "Enviando...",
+      success: "¡Mensaje enviado con éxito! Te responderé lo antes posible.",
+      error: "No se pudo enviar el mensaje. Intenta de nuevo o escribe a contact@eddux.dev",
       direct: "O escríbeme directamente",
-      formNote: "El formulario abre tu cliente de correo con el mensaje preparado.",
+      formNote: "Tu mensaje se enviará directamente por notificación instantánea.",
     },
     footer: "Backend & Cloud Engineer · Perú",
   },
