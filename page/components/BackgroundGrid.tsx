@@ -9,8 +9,8 @@ export default function BackgroundGrid() {
   const lastPosRef = useRef({ x: -1000, y: -1000 })
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      lastPosRef.current = { x: e.clientX, y: e.clientY }
+    const updatePosition = (x: number, y: number) => {
+      lastPosRef.current = { x, y }
 
       if (!animFrameRef.current) {
         animFrameRef.current = requestAnimationFrame(() => {
@@ -19,26 +19,46 @@ export default function BackgroundGrid() {
         })
       }
 
-      if (!isVisible) {
-        setIsVisible(true)
-      }
+      setIsVisible(true)
+    }
+
+    const handleMouseMove = (e: MouseEvent) => {
+      updatePosition(e.clientX, e.clientY)
+    }
+
+    const handleMouseEnter = (e: MouseEvent) => {
+      updatePosition(e.clientX, e.clientY)
     }
 
     const handleMouseLeave = () => {
       setIsVisible(false)
     }
 
+    const handleWindowFocus = () => {
+      setIsVisible(true)
+    }
+
+    const handleWindowBlur = () => {
+      setIsVisible(false)
+    }
+
     window.addEventListener("mousemove", handleMouseMove, { passive: true })
-    document.body.addEventListener("mouseleave", handleMouseLeave)
+    window.addEventListener("mouseenter", handleMouseEnter, { passive: true })
+    window.addEventListener("mouseleave", handleMouseLeave)
+    window.addEventListener("focus", handleWindowFocus)
+    window.addEventListener("blur", handleWindowBlur)
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove)
-      document.body.removeEventListener("mouseleave", handleMouseLeave)
+      window.removeEventListener("mouseenter", handleMouseEnter)
+      window.removeEventListener("mouseleave", handleMouseLeave)
+      window.removeEventListener("focus", handleWindowFocus)
+      window.removeEventListener("blur", handleWindowBlur)
       if (animFrameRef.current) {
         cancelAnimationFrame(animFrameRef.current)
       }
     }
-  }, [isVisible])
+  }, [])
 
   return (
     <div
