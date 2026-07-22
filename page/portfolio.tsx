@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Header from "@/components/Header"
+import BackgroundGrid from "@/components/BackgroundGrid"
 import HeroSection from "@/components/HeroSection"
 import StatsSection from "@/components/StatsSection"
 import ProjectsSection from "@/components/ProjectsSection"
@@ -23,7 +24,8 @@ export default function Portfolio() {
   }
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#070b17] text-slate-100 selection:bg-cyan-300 selection:text-slate-950">
+    <div className="relative min-h-screen overflow-x-hidden bg-[#070b17] text-slate-100 selection:bg-cyan-300 selection:text-slate-950">
+      <BackgroundGrid />
       <div className="site-noise" aria-hidden="true" />
 
       <Header navigate={navigate} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
