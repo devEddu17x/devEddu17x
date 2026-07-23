@@ -64,6 +64,8 @@ const commonProjects = {
   },
 }
 
+const cvBaseUrl = `${process.env.NEXT_PUBLIC_CV_BASE_URL}`.replace(/\/+$/, "")
+
 export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
   en: {
     nav: { projects: "Projects", skills: "Technical edge", about: "About", contact: "Contact" },
@@ -74,7 +76,7 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
       description: "I build production backend systems and cloud infrastructure that are secure, scalable, and built to last.",
       contact: "Contact me",
       cv: "View CV",
-      cvUrl: "https://portfolio-cdn.eddux.dev/MAMANI_AZABACHE_EDUARDO_JAVIER_CV-en.pdf",
+      cvUrl: `${cvBaseUrl}/MAMANI_AZABACHE_EDUARDO_JAVIER_CV-en.pdf`,
       cvFilename: "Eddu-CV-EN.pdf",
       basedIn: "Based in Peru · English B2",
     },
@@ -162,7 +164,7 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
       description: "Construyo sistemas backend e infraestructura cloud de producción, seguros, escalables y pensados para durar.",
       contact: "Contáctame",
       cv: "Ver CV",
-      cvUrl: "https://portfolio-cdn.eddux.dev/MAMANI_AZABACHE_EDUARDO_JAVIER_CV-es.pdf",
+      cvUrl: `${cvBaseUrl}/MAMANI_AZABACHE_EDUARDO_JAVIER_CV-es.pdf`,
       cvFilename: "Eddu-CV-ES.pdf",
       basedIn: "Desde Perú · Inglés B2",
     },
