@@ -12,6 +12,29 @@ export default function HeroSection({ navigate }: HeroSectionProps) {
   const { language } = useLanguage()
   const content = portfolioContent[language]
 
+  const handleDownload = async (e: React.MouseEvent) => {
+    e.preventDefault()
+    const fileName = content.hero.cvUrl.split("/").pop() || "CV.pdf"
+    try {
+      const response = await fetch(content.hero.cvUrl)
+      const blob = await response.blob()
+      const blobUrl = window.URL.createObjectURL(blob)
+      const link = document.createElement("a")
+      link.href = blobUrl
+      link.download = fileName
+      document.body.appendChild(link)
+      link.click()
+      link.remove()
+      window.URL.revokeObjectURL(blobUrl)
+    } catch (error) {
+      const link = document.createElement("a")
+      link.href = content.hero.cvUrl
+      link.download = fileName
+      link.target = "_blank"
+      link.click()
+    }
+  }
+
   return (
     <section id="home" className="relative isolate flex min-h-screen items-center overflow-hidden pt-20">
       <div className="hero-orb hero-orb-one" aria-hidden="true" />
@@ -30,16 +53,10 @@ export default function HeroSection({ navigate }: HeroSectionProps) {
               {content.hero.contact}
               <ArrowUpRight className="h-4 w-4" />
             </button>
-            <a
-              href={content.hero.cvUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              download={content.hero.cvFilename}
-              className="button-secondary"
-            >
+            <button onClick={handleDownload} className="button-secondary">
               <Download className="h-4 w-4" />
               {content.hero.cv}
-            </a>
+            </button>
           </div>
           <div className="mt-10 flex items-center gap-4 text-sm text-slate-400">
             <span className="status-dot" />{content.hero.basedIn}
