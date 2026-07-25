@@ -33,6 +33,7 @@ export type PortfolioContent = {
   skills: { eyebrow: string; title: string; intro: string; items: { title: string; description: string; technologies: string[] }[] }
   about: { eyebrow: string; title: string; lead: string; paragraphs: string[]; educationLabel: string; education: string; languageLabel: string; language: string }
   contact: { eyebrow: string; title: string; intro: string; emailLabel: string; name: string; email: string; subject: string; message: string; send: string; sending: string; success: string; error: string; direct: string; formNote: string }
+  notFound: { eyebrow: string; title: string; description: string; backHome: string; viewProjects: string; terminalError: string }
   footer: string
 }
 
@@ -153,6 +154,14 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
       direct: "Or write directly",
       formNote: "Your message will be sent instantly.",
     },
+    notFound: {
+      eyebrow: "HTTP 404 // ROUTE_EXCEPTION",
+      title: "Not found.",
+      description: "The requested route does not exist.",
+      backHome: "Return to Home",
+      viewProjects: "View Selected Work",
+      terminalError: "ERR_404_NOT_FOUND: Resource URI unresolved on eddux website.",
+    },
     footer: "Backend & Cloud Engineer · Perú",
   },
   es: {
@@ -246,6 +255,14 @@ export const portfolioContent: Record<PortfolioLanguage, PortfolioContent> = {
       error: "No se pudo enviar el mensaje. Intenta de nuevo o escribe a contact@eddux.dev",
       direct: "O escríbeme directamente",
       formNote: "Tu mensaje me llegará inmediatamente.",
+    },
+    notFound: {
+      eyebrow: "HTTP 404 // RUTA_NO_ENCONTRADA",
+      title: "Endpoint no encontrado.",
+      description: "La ruta solicitada no existe.",
+      backHome: "Volver al Inicio",
+      viewProjects: "Ver Trabajo Destacado",
+      terminalError: "ERR_404_NOT_FOUND: Ruta URI no resuelta en eddux website.",
     },
     footer: "Backend & Cloud Engineer · Perú",
   },
