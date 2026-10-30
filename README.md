@@ -34,7 +34,7 @@ NOTE (local asset):
 | Project | What it is | Stack | Status |
 | :--- | :--- | :--- | :--- |
 | **[Telar](https://telar-app.eddux.dev/)** | Platform for garment manufacturer operations management (quotes, orders, tenancy, files, and auth). | Next.js · NestJS · PostgreSQL · AWS (ECS, RDS, Cognito, ALB, S3, CloudFront) · Terraform | **In Production** (Client project) |
-| **[Fast Share](https://github.com/devEddu17x/fast-share)** | Personal and team file-sharing hub featuring real-time rooms, 500 MB file drops, a URL shortener, and a Telegram bot bridge. | Cloudflare Workers · Durable Objects · R2 · D1 · TypeScript | **In Production** (Open source) |
+| **[Fast Share](https://share.eddux.dev/)** | Personal and team file-sharing hub featuring real-time rooms, 500 MB file drops, a URL shortener, and a Telegram bot bridge. | Cloudflare Workers · Durable Objects · R2 · D1 · TypeScript | **In Production** (Open source) |
 | **[MeetOne](https://meetone.eddux.dev/)** | Real-time language exchange platform pairing users via serverless matchmaking and WebRTC connections. | Vue 3 · Lambdas · API Gateway · DynamoDB · Cloudflare Calls (TURN/Relay) · Terraform | **In Production** (Startup) |
 | **[Tree Rings](https://github.com/devEddu17x/tree-rings-kafka-api)** | Distributed image processing system utilizing Kafka-triggered PySpark pipelines and CNN model ring detection. | NestJS · Socket.IO · Apache Spark · Apache Kafka · Docker · OpenCV · Cloudflare R2 | **Lab Exploration** |
 
