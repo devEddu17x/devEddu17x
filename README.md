@@ -26,26 +26,30 @@
 
 ## Featured projects
 
-| Project | What it is | Stack | Status |
-| :--- | :--- | :--- | :--- |
-| **[Telar](https://telar-app.eddux.dev/)** | Platform for garment manufacturer operations management (quotes, production orders, tenancy, files, and auth). | AWS (ECS, Fargate, RDS, Cognito, ALB, API Gateway, S3, CloudFront, WAF) · Terraform · GitHub OIDC · NestJS · Next.js · PostgreSQL | **In Production** (Client project) |
-| **[MeetOne](https://meetone.eddux.dev/)** | Real-time language exchange platform pairing users via serverless matchmaking and WebRTC connections. | AWS (Lambda, API Gateway, DynamoDB, Cognito) · Terraform · Cloudflare Calls · Vue 3 · WebRTC | **In Production** (Startup) |
-| **[Tree Rings](https://github.com/devEddu17x/tree-rings-kafka-api)** | Distributed image processing system utilizing Kafka-triggered PySpark pipelines and CNN ring detection. | NestJS · Socket.IO · Apache Spark · Apache Kafka · Docker · OpenCV · Cloudflare R2 | **Lab Exploration** |
+| Project                                                              | What it is                                                                                                                   | Stack                                                                                                                             | Status                             |
+| :------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------- |
+| **[Telar](https://telar-app.eddux.dev/)**                            | Platform for garment manufacturer operations management (quotes, production orders, tenancy, files, and auth).               | AWS (ECS, Fargate, RDS, Cognito, ALB, API Gateway, S3, CloudFront, WAF) · Terraform · GitHub OIDC · NestJS · Next.js · PostgreSQL | **In Production** (Client project) |
+| **[Fast Share](https://share.eddux.dev/)**                           | Personal and team file-sharing hub featuring real-time rooms, 500 MB file drops, a URL shortener, and a Telegram bot bridge. | Cloudflare Workers · Durable Objects · R2 · D1 · TypeScript                                                                       | **In Production** (Open source)    |
+| **[MeetOne](https://meetone.eddux.dev/)**                            | Real-time language exchange platform pairing users via serverless matchmaking and WebRTC connections.                        | AWS (Lambda, API Gateway, DynamoDB, Cognito) · Terraform · Cloudflare Calls · Vue 3 · WebRTC                                      | **In Production** (Startup)        |
+| **[Tree Rings](https://github.com/devEddu17x/tree-rings-kafka-api)** | Distributed image processing system utilizing Kafka-triggered PySpark pipelines and CNN ring detection.                      | NestJS · Socket.IO · Apache Spark · Apache Kafka · Docker · OpenCV · Cloudflare R2                                                | **Lab Exploration**                |
 
 ## Core stack
 
 ### Cloud & Infrastructure
+
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900)
 ![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=for-the-badge&logo=terraform&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
 
 ### DevOps & Observability
+
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F9A03F?style=for-the-badge&logo=grafana&logoColor=white)
 
 ### Backend & APIs
+
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
@@ -54,13 +58,14 @@
 ![WebRTC](https://img.shields.io/badge/WebRTC-FF6E14?style=for-the-badge&logo=webrtc&logoColor=white)
 
 ### Data & Messaging
+
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![DynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb&logoColor=white)
 ![Amazon SQS](https://img.shields.io/badge/Amazon%20SQS-FF4F8B?style=for-the-badge)
 ![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
 ![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
 
-*...and more across the AWS ecosystem (compute, networking, IAM, storage, messaging, observability) and backend tooling.*
+_...and more across the AWS ecosystem (compute, networking, IAM, storage, messaging, observability) and backend tooling._
 
 ## Certifications
 
