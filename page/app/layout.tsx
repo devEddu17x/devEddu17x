@@ -4,8 +4,8 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.eddux.dev'),
-  title: 'Eddu — Backend & Cloud Engineer',
-  description: 'Production backend systems and cloud infrastructure.',
+  title: 'Eddu — AWS Solutions Architect & Cloud Engineer',
+  description: 'AWS cloud architectures, Terraform automation, and production backend systems.',
   alternates: {
     canonical: '/',
   },
