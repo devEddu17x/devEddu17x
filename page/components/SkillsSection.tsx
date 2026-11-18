@@ -10,10 +10,10 @@ import {
   SiOpenai,
   SiWebrtc,
   SiAmazon,
+  SiAmazonsqs,
   SiTerraform,
   SiCloudflare,
   SiPostgresql,
-  SiMysql,
   SiAmazondynamodb,
   SiApachekafka,
   SiApachespark,
@@ -43,7 +43,7 @@ const techIconMap: Record<string, React.ComponentType<{ className?: string }>> =
   "API Gateway": SiAmazon,
   "Cloudflare": SiCloudflare,
   "PostgreSQL": SiPostgresql,
-  "MySQL": SiMysql,
+  "Amazon SQS": SiAmazonsqs,
   "DynamoDB": SiAmazondynamodb,
   "Kafka": SiApachekafka,
   "Apache Spark": SiApachespark,
@@ -74,7 +74,7 @@ const techColorMap: Record<string, string> = {
   "API Gateway": "text-[#FF9900]",
   "Cloudflare": "text-[#F38020]",
   "PostgreSQL": "text-[#4169E1]",
-  "MySQL": "text-[#00758F]",
+  "Amazon SQS": "text-[#FF4F8B]",
   "DynamoDB": "text-[#2C8EBB]",
   "Kafka": "text-white",
   "Apache Spark": "text-[#E25A1C]",
@@ -92,7 +92,7 @@ export default function SkillsSection() {
   const content = portfolioContent[language]
 
   return (
-    <section id="skills" className="section-shell border-y border-white/5 bg-[#0a1020]/75">
+    <section id="skills" className="section-shell">
       <div className="section-heading">
         <p className="eyebrow"><span />{content.skills.eyebrow}</p>
         <h2>{content.skills.title}</h2>
@@ -100,17 +100,11 @@ export default function SkillsSection() {
       </div>
       <div className="mt-14 grid gap-6 md:grid-cols-2">
         {content.skills.items.map((skill, index) => {
-          const icons = [Server, Cloud, Database, Workflow]
+          const icons = [Cloud, Workflow, Server, Database]
           const Icon = icons[index]
 
           // Theme settings for glows and highlights per domain
           const themes = [
-            {
-              border: "group-hover:border-cyan-500/30",
-              glow: "group-hover:shadow-[0_0_35px_rgba(34,211,238,0.06)]",
-              line: "bg-cyan-500/50",
-              iconColor: "text-cyan-400",
-            },
             {
               border: "group-hover:border-amber-500/30",
               glow: "group-hover:shadow-[0_0_35px_rgba(245,158,11,0.06)]",
@@ -118,16 +112,22 @@ export default function SkillsSection() {
               iconColor: "text-amber-400",
             },
             {
-              border: "group-hover:border-purple-500/30",
-              glow: "group-hover:shadow-[0_0_35px_rgba(168,85,247,0.06)]",
-              line: "bg-purple-500/50",
-              iconColor: "text-purple-400",
-            },
-            {
               border: "group-hover:border-emerald-500/30",
               glow: "group-hover:shadow-[0_0_35px_rgba(16,185,129,0.06)]",
               line: "bg-emerald-500/50",
               iconColor: "text-emerald-400",
+            },
+            {
+              border: "group-hover:border-cyan-500/30",
+              glow: "group-hover:shadow-[0_0_35px_rgba(34,211,238,0.06)]",
+              line: "bg-cyan-500/50",
+              iconColor: "text-cyan-400",
+            },
+            {
+              border: "group-hover:border-purple-500/30",
+              glow: "group-hover:shadow-[0_0_35px_rgba(168,85,247,0.06)]",
+              line: "bg-purple-500/50",
+              iconColor: "text-purple-400",
             }
           ]
 

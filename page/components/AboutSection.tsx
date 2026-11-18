@@ -22,49 +22,6 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-
-      {/* Cards container: aligned horizontally in a matching grid */}
-      <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] mt-10">
-        {/* Left column card */}
-        <div>
-          <div className="detail-card p-6 border border-white/5 bg-[#070b17]/50 rounded-xl relative overflow-hidden group hover:border-cyan-500/20 transition-all duration-300 h-full">
-            <div className="absolute top-0 left-0 w-1 h-full bg-cyan-500/30 group-hover:bg-cyan-500 transition-colors" />
-            <div className="pl-4">
-              <p className="font-mono text-xs text-cyan-300/80 uppercase tracking-widest mb-1.5">
-                {content.about.educationLabel}
-              </p>
-              <h4 className="text-lg font-bold text-white mb-2 leading-tight">
-                {content.about.education}
-              </h4>
-              <p className="text-sm leading-relaxed">
-                <a
-                  href="https://upao.edu.pe/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cyan-300/90 hover:text-cyan-200 transition-colors underline decoration-cyan-500/30 underline-offset-4"
-                >
-                  Universidad Privada Antenor Orrego
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Right column card */}
-        <div>
-          <div className="detail-card p-6 border border-white/5 bg-[#070b17]/50 rounded-xl relative overflow-hidden group hover:border-cyan-500/20 transition-all duration-300 h-full">
-            <div className="absolute top-0 left-0 w-1 h-full bg-cyan-500/30 group-hover:bg-cyan-500 transition-colors" />
-            <div className="pl-4">
-              <p className="font-mono text-xs text-cyan-300/80 uppercase tracking-widest mb-1.5">
-                {content.about.languageLabel}
-              </p>
-              <strong className="text-base text-slate-200">
-                {content.about.language}
-              </strong>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   )
 }

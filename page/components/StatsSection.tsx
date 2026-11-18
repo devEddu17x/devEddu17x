@@ -86,8 +86,8 @@ export default function StatsSection({ navigate }: StatsSectionProps) {
     {
       id: "provisioning",
       tag: "provisioning //",
-      line1: "Infrastructure as Code",
-      line2: "(IaC)",
+      line1: "Terraform &",
+      line2: "Cloud IaC",
       activeBg: "bg-amber-500/10 border-amber-500/30 shadow-[0_0_20px_rgba(245,158,11,0.15)]",
       activeTag: "text-amber-300",
       activeGlow: "text-amber-100 drop-shadow-[0_0_10px_rgba(252,211,77,0.8)]",
@@ -259,7 +259,7 @@ export default function StatsSection({ navigate }: StatsSectionProps) {
           </div>
         </div>
       </div>
-      <button onClick={() => navigate("projects")} className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-xs uppercase tracking-[.16em] text-slate-500 transition hover:text-cyan-200 md:flex"><ArrowDown size={14} />scroll</button>
+      <button onClick={() => navigate("contact")} className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-xs uppercase tracking-[.16em] text-slate-500 transition hover:text-cyan-200 md:flex"><ArrowDown size={14} />scroll</button>
     </section>
   )
 }

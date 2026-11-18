@@ -42,12 +42,15 @@ export default function HeroSection({ navigate }: HeroSectionProps) {
       <div className="hero-grid" aria-hidden="true" />
       <div className="relative mx-auto grid w-full max-w-7xl gap-14 px-5 lg:grid-cols-[1.3fr_.7fr] lg:px-8">
         <div className="max-w-4xl">
-          <p className="eyebrow"><span />{content.hero.eyebrow}</p>
-          <h1 className="mt-7 max-w-4xl text-5xl font-semibold leading-[.98] tracking-[-0.06em] text-white sm:text-7xl lg:text-8xl">
+          <h1 className="max-w-4xl text-5xl font-semibold leading-[.98] tracking-[-0.06em] text-white sm:text-7xl lg:text-8xl">
             {content.hero.greeting}<br />
             <span className="text-gradient">{content.hero.title}</span>
           </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">{content.hero.description}</p>
+          <p className="mt-5 flex items-center gap-3 text-xl font-semibold tracking-tight text-cyan-200 sm:text-2xl lg:text-3xl">
+            <span className="hidden h-[2px] w-7 shrink-0 bg-cyan-400 sm:block" aria-hidden="true" />
+            <span>{content.hero.role}</span>
+          </p>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">{content.hero.description}</p>
           <div className="mt-10 flex flex-wrap gap-3">
             <button onClick={() => navigate("contact")} className="button-primary">
               {content.hero.contact}
@@ -57,9 +60,6 @@ export default function HeroSection({ navigate }: HeroSectionProps) {
               <Download className="h-4 w-4" />
               {content.hero.cv}
             </button>
-          </div>
-          <div className="mt-10 flex items-center gap-4 text-sm text-slate-400">
-            <span className="status-dot" />{content.hero.basedIn}
           </div>
         </div>
 
@@ -127,7 +127,7 @@ export default function HeroSection({ navigate }: HeroSectionProps) {
         </div>
       </div>
       <button
-        onClick={() => navigate("stats")}
+        onClick={() => navigate("projects")}
         className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-xs uppercase tracking-[.16em] text-slate-500 transition hover:text-cyan-200 md:flex"
       >
         <ArrowDown size={14} />scroll

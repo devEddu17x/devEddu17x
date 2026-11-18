@@ -16,8 +16,9 @@ export default function Header({ navigate, menuOpen, setMenuOpen }: HeaderProps)
 
   const navItems = [
     ["projects", content.nav.projects],
-    ["skills", content.nav.skills],
     ["about", content.nav.about],
+    ["education", content.nav.education],
+    ["skills", content.nav.skills],
     ["contact", content.nav.contact],
   ] as const
 

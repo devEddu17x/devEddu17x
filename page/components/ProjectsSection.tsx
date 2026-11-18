@@ -51,14 +51,14 @@ export default function ProjectsSection() {
   const content = portfolioContent[language]
 
   return (
-    <section id="projects" className="section-shell">
+    <section id="projects" className="section-shell border-y border-white/5 bg-[#0a1020]/75">
       <div className="section-heading">
         <p className="eyebrow"><span />{content.projects.eyebrow}</p>
         <h2>{content.projects.title}</h2>
         <p>{content.projects.intro}</p>
       </div>
 
-      <div className="mt-14 grid gap-7 xl:grid-cols-2">
+      <div className="mt-14 grid items-start gap-7 xl:grid-cols-2">
         {content.projects.items.map((project) => (
           <article key={project.name} className="project-card">
             <ProjectVisual project={project} hint={content.projects.mediaHint} />
@@ -83,46 +83,51 @@ export default function ProjectsSection() {
                 {project.impact.map((line) => <li key={line}>{line}</li>)}
               </ul>
 
-              {/* Prominent Stack Section */}
-              <div className="mt-8 space-y-3">
-                {[
-                  {
-                    label: content.projects.stack.frontend,
-                    techs: project.frontend,
-                    containerClass: "border border-blue-500/20 bg-blue-950/20 hover:border-blue-500/40",
-                    labelClass: "text-blue-300 font-bold",
-                    pillClass: "border border-blue-400/25 bg-blue-500/10 text-blue-200 hover:border-blue-400/50 hover:bg-blue-500/20 hover:text-white",
-                  },
-                  {
-                    label: content.projects.stack.backend,
-                    techs: project.backend,
-                    containerClass: "border border-cyan-500/20 bg-cyan-950/20 hover:border-cyan-500/40",
-                    labelClass: "text-cyan-300 font-bold",
-                    pillClass: "border border-cyan-400/25 bg-cyan-500/10 text-cyan-200 hover:border-cyan-400/50 hover:bg-cyan-500/20 hover:text-white",
-                  },
-                  {
-                    label: content.projects.stack.cloud,
-                    techs: project.cloud,
-                    containerClass: "border border-purple-500/20 bg-purple-950/20 hover:border-purple-500/40",
-                    labelClass: "text-purple-300 font-bold",
-                    pillClass: "border border-purple-400/25 bg-purple-500/10 text-purple-200 hover:border-purple-400/50 hover:bg-purple-500/20 hover:text-white",
-                  },
-                ].map(({ label, techs, containerClass, labelClass, pillClass }) => (
-                  <div key={label} className={`grid grid-cols-1 sm:grid-cols-[10rem_1fr] items-start gap-2.5 sm:gap-4 p-3.5 rounded-xl transition-colors duration-300 ${containerClass}`}>
-                    <p className={`text-xs sm:text-[13px] tracking-wide pt-1 ${labelClass}`}>{label}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {techs.map((tech) => (
-                        <span
-                          key={tech}
-                          className={`rounded-lg px-3 py-1 font-mono text-[12px] font-semibold transition-all duration-200 ${pillClass}`}
-                        >
-                          {tech}
-                        </span>
-                      ))}
+              {/* Collapsible Stack Details */}
+              <details className="stack-disclosure mt-7 rounded-xl border border-white/10 bg-[#070b17]/45 transition-colors hover:border-cyan-500/25">
+                <summary className="stack-summary cursor-pointer select-none px-4 py-3 text-xs sm:text-sm font-semibold text-slate-200 transition-colors hover:text-cyan-200">
+                  <span>{content.projects.stackLabel}</span>
+                </summary>
+                <div className="space-y-3 border-t border-white/5 px-3.5 pb-3.5 pt-3">
+                  {[
+                    {
+                      label: content.projects.stack.frontend,
+                      techs: project.frontend,
+                      containerClass: "border border-blue-500/20 bg-blue-950/20 hover:border-blue-500/40",
+                      labelClass: "text-blue-300 font-bold",
+                      pillClass: "border border-blue-400/25 bg-blue-500/10 text-blue-200 hover:border-blue-400/50 hover:bg-blue-500/20 hover:text-white",
+                    },
+                    {
+                      label: content.projects.stack.backend,
+                      techs: project.backend,
+                      containerClass: "border border-cyan-500/20 bg-cyan-950/20 hover:border-cyan-500/40",
+                      labelClass: "text-cyan-300 font-bold",
+                      pillClass: "border border-cyan-400/25 bg-cyan-500/10 text-cyan-200 hover:border-cyan-400/50 hover:bg-cyan-500/20 hover:text-white",
+                    },
+                    {
+                      label: content.projects.stack.cloud,
+                      techs: project.cloud,
+                      containerClass: "border border-purple-500/20 bg-purple-950/20 hover:border-purple-500/40",
+                      labelClass: "text-purple-300 font-bold",
+                      pillClass: "border border-purple-400/25 bg-purple-500/10 text-purple-200 hover:border-purple-400/50 hover:bg-purple-500/20 hover:text-white",
+                    },
+                  ].map(({ label, techs, containerClass, labelClass, pillClass }) => (
+                    <div key={label} className={`grid grid-cols-1 sm:grid-cols-[10rem_1fr] items-start gap-2.5 sm:gap-4 p-3.5 rounded-xl transition-colors duration-300 ${containerClass}`}>
+                      <p className={`text-xs sm:text-[13px] tracking-wide pt-1 ${labelClass}`}>{label}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {techs.map((tech) => (
+                          <span
+                            key={tech}
+                            className={`rounded-lg px-3 py-1 font-mono text-[12px] font-semibold transition-all duration-200 ${pillClass}`}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              </details>
 
               <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm">
                 <a
