@@ -4,10 +4,11 @@ import { useState } from "react"
 import Header from "@/components/Header"
 import BackgroundGrid from "@/components/BackgroundGrid"
 import HeroSection from "@/components/HeroSection"
-import StatsSection from "@/components/StatsSection"
 import ProjectsSection from "@/components/ProjectsSection"
-import SkillsSection from "@/components/SkillsSection"
 import AboutSection from "@/components/AboutSection"
+import EducationSection from "@/components/EducationSection"
+import SkillsSection from "@/components/SkillsSection"
+import StatsSection from "@/components/StatsSection"
 import ContactSection from "@/components/ContactSection"
 import Footer from "@/components/Footer"
 
@@ -32,10 +33,11 @@ export default function Portfolio() {
 
       <main>
         <HeroSection navigate={navigate} />
-        <StatsSection navigate={navigate} />
         <ProjectsSection />
-        <SkillsSection />
         <AboutSection />
+        <EducationSection />
+        <SkillsSection />
+        <StatsSection navigate={navigate} />
         <ContactSection />
       </main>
 
